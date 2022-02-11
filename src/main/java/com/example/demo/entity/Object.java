@@ -18,8 +18,7 @@ public class Object {
 	private int quantity;
 
 	@NotNull
-	// @Size(max = 25)
-	// @Pattern(regexp = "^[a-zA-Z0-9]{25}", message = "length must be 25")
+	@NotBlank
 	private String customerName;
 
 	public Object() {
