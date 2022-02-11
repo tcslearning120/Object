@@ -16,19 +16,17 @@ public class Object {
 	private int objectid;
 	@NotNull
 	private int quantity;
-	@NotBlank
+
 	@NotNull
-	@Size(max = 25)
-	@Pattern(regexp = "^[a-zA-Z0-9]{25}", message = "length must be 25")
+	// @Size(max = 25)
+	// @Pattern(regexp = "^[a-zA-Z0-9]{25}", message = "length must be 25")
 	private String customerName;
-	
+
 	public Object() {
-		
+
 	}
 
-	public Object(int objectid, @NotNull int quantity,
-			@NotBlank @NotNull @Size(max = 25) @Pattern(regexp = "^[a-zA-Z0-9]{25}", message = "length must be 25") String customerName,
-			String paymentMethod) {
+	public Object(int objectid, @NotNull int quantity, @NotBlank @NotNull String customerName, String paymentMethod) {
 		super();
 		this.objectid = objectid;
 		this.quantity = quantity;
@@ -69,5 +67,5 @@ public class Object {
 	public void setPaymentMethod(String paymentMethod) {
 		this.paymentMethod = paymentMethod;
 	}
-	
+
 }
